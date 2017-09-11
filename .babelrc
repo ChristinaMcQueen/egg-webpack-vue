@@ -1,0 +1,11 @@
+{
+    "presets": [
+        ["env", { "modules": "commonjs" }],
+        "stage-0",
+        "babel-preset-power-assert"
+    ],
+    "plugins": [
+        "transform-async-to-generator",
+        "syntax-async-functions"
+    ]
+}
