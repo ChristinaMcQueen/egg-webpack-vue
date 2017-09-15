@@ -9,19 +9,35 @@ module.exports = {
         exclude: ['app/web/page/[a-z]+/component', 'app/web/page/test', 'app/web/page/html', 'app/web/page/app'],
         extMatch: '.vue',
         loader: {
-            client: 'app/web/framework/vue/entry/client-loader.js',
-            server: 'app/web/framework/vue/entry/server-loader.js'
+            client: 'app/web/framework/entry/client-loader.js',
+            server: 'app/web/framework/entry/server-loader.js'
         }
     },
-    // entry: path.join(__dirname, 'app/web/page/app/main.js'),
     output: {
         path: __dirname,
         filename: 'bundle.js'
     },
+    module: {
+        rules: [
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
+                // options: vueLoaderConfig
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel-loader'
+                // include: [resolve('src'), resolve('test'), resolve('document')]
+            },
+            {
+                test: /\.md$/,
+                loader: './build/vue-markdown-loader2'
+            }
+        ]
+    },
     alias: {
-        server: 'app/web/framework/vue/entry/server.js',
-        client: 'app/web/framework/vue/entry/client.js',
-        app: 'app/web/framework/vue/app.js',
+        server: 'app/web/framework/entry/server.js',
+        client: 'app/web/framework/entry/client.js',
         asset: 'app/web/asset',
         component: 'app/web/component',
         framework: 'app/web/framework',

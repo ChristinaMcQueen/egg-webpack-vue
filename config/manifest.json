@@ -1,1 +1,1 @@
-{"common/Footer.js":"client/js/common/Footer.js","common/Header.js":"client/js/common/Header.js","content/content.js":"client/js/content/content.js","home/home.js":"client/js/home/home.js","vendor.js":"client/js/vendor.js"}
+{"common/Footer.js":"client/js/common/Footer.js","common/Header.js":"client/js/common/Header.js","content/Content.js":"client/js/content/Content.js","home/views/Home.js":"client/js/home/views/Home.js","introduce/views/Introduce.js":"client/js/introduce/views/Introduce.js","vendor.js":"client/js/vendor.js"}

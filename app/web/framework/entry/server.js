@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import '../component/index';
+import './index';
 
 exports.render = options => {
     if (options.store && options.router) {

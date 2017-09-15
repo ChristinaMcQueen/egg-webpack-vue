@@ -1,8 +1,10 @@
-import Main from './main';
+import Vue from 'vue';
+import VueD3 from 'vue-d3';
+Vue.use(VueD3);
 
-const content = '<Main><div slot="main"><slot></slot></div></Main>';
-const template =
-    `<!DOCTYPE html>
+const Template = {
+    name: 'Template',
+    template: `<!DOCTYPE html>
         <html lang="en">
         <head>
             <meta http-equiv="content-type" content="text/html;charset=utf-8">
@@ -12,14 +14,13 @@ const template =
             <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
         </head>
         <body>
-            <div id="app">${content}</div>
+            <div id="app" slot="content">
+                <slot name="main">
+                    <slot></slot>
+                </slot>
+            </div>
         </body>
-    </html>`;
-
-export default {
-    name: 'Layout',
-    components: {
-        Main
-    },
-    template
+    </html>`
 };
+
+Vue.component('Template', Template);

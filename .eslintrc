@@ -13,7 +13,7 @@
       "error",
       4
     ],
-    "destructuring": true,
+    "destructuring": 1,
     "array-bracket-spacing": [
       "error",
       "never"

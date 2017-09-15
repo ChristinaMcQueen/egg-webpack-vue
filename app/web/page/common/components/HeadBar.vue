@@ -13,7 +13,7 @@
     </header>
 </template>
 
-<style lang="less">
+<style lang="less" scoped>
     .nav-wrap {
         color: #798d8f;
         border-bottom: 2px solid #f5f5f5;
@@ -46,7 +46,7 @@
 </style>
 
 <script type="text/javascript">
-    import config from './config'
+    import config from '../config'
 
     export default {
         data() {

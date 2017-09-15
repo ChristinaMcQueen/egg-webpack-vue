@@ -3,11 +3,13 @@ const config = {
         {
             title: '首页',
             active: true,
-            path: '/'
+            path: '/',
+            value: 'home'
         }, {
             title: '介绍',
             active: false,
-            path: '/introduce'
+            path: '/introduce',
+            value: 'introduce'
         }
     ]
 };
